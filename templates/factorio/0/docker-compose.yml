@@ -29,3 +29,5 @@ factorio-manager:
   links:
     - factorio
   net: bridge
+  volumes_from:
+    - factorio-data
