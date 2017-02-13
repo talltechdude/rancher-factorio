@@ -20,3 +20,11 @@ factorio-data:
   labels:
     io.rancher.container.start_once: "true"
 
+factorio-manager:
+  image: jjclark/factorio
+  environment:
+    - ADMIN_PASSWORD=12345678
+  ports:
+    - 34197:34197/udp
+    - 8000:8000/tcp
+  net: bridge
