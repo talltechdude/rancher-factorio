@@ -8,9 +8,7 @@ factorio:
   volumes_from:
     - factorio-data
   labels:
-    io.rancher.sidekicks: 
-      - factorio-data
-      - factorio-manager
+    io.rancher.sidekicks: factorio-data, factorio-manager
 
 factorio-data:
   image: talltechdude/rancher-factorio
