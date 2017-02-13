@@ -1,0 +1,14 @@
+.catalog:
+  name: Factorio Server
+  version: 0.0.1
+  description: |
+    Factorio Server
+  questions:
+    - variable: "servername"
+      type: string
+      required: true
+      label: "Server Name"
+      description: "A server name to identify this server."
+
+factorio:
+  scale: 1

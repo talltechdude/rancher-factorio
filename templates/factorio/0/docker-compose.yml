@@ -1,0 +1,22 @@
+factorio:
+  build: .
+  ports:
+    - 34197:34197/udp
+  net: bridge
+  environment:
+    - FACTORIO_SAVE_NAME=Factorio001
+  volumes_from:
+    - factorio-data
+  labels:
+    io.rancher.sidekicks: factorio-data
+
+factorio-data:
+  image: alpine:3.4
+  net: none
+  volumes:
+    - /opt/factorio/saves
+    - /opt/factorio/mods
+  command: /bin/true
+  labels:
+    io.rancher.container.start_once: "true"
+
