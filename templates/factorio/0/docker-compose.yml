@@ -25,6 +25,7 @@ factorio-manager:
   environment:
     - ADMIN_PASSWORD=12345678
   ports:
-    - 34197:34197/udp
     - 8000:8000/tcp
+  links:
+    - factorio
   net: bridge
