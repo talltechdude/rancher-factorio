@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM krallin/ubuntu-tini
 
 ENV VERSION=0.14.22
 
@@ -10,8 +10,6 @@ RUN apt-get update && apt-get install -y curl tini && \
 	apt-get remove --purge -y curl && \
 	chmod +x /opt/factorio/bin/x64/factorio && \
 	mkdir /opt/factorio/config
-
-ENTRYPOINT ["/sbin/tini", "--"]
 
 WORKDIR /opt/factorio
 
