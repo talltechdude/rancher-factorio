@@ -16,9 +16,9 @@ RUN chmod +x /opt/factorio/bin/x64/factorio
 WORKDIR /opt/factorio
 
 RUN mkdir /opt/factorio/config
-COPY ./map-gen-settings.json /opt/factorio/config
-COPY ./server-settings.json /opt/factorio/config
-COPY ./run.sh /opt/factorio
+COPY files/map-gen-settings.json /opt/factorio/config
+COPY files/server-settings.json /opt/factorio/config
+COPY files/run.sh /opt/factorio
 
 ENV FACTORIO_SAVE_NAME=factorio
 ENV FACTORIO_PORT=

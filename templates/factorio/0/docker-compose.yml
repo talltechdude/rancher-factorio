@@ -1,17 +1,17 @@
 factorio:
-  build: .
+  image: talltechdude/rancher-factorio
   ports:
     - 34197:34197/udp
   net: bridge
   environment:
-    - FACTORIO_SAVE_NAME=Factorio001
+    - FACTORIO_SAVE_NAME=${servername}
   volumes_from:
     - factorio-data
   labels:
     io.rancher.sidekicks: factorio-data
 
 factorio-data:
-  image: alpine:3.4
+  image: talltechdude/rancher-factorio
   net: none
   volumes:
     - /opt/factorio/saves

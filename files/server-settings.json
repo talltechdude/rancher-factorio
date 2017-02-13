@@ -21,7 +21,7 @@
   "_comment_token": "Authentication token. May be used instead of 'password' above.",
   "token": "",
 
-  "game_password": "starwars",
+  "game_password": "",
 
   "_comment_require_user_verification": "When set to true, the server will only allow clients that have a valid Factorio.com account",
   "require_user_verification": false,
@@ -56,5 +56,5 @@
   "autosave_only_on_server": true,
 
   "_comment_admins": "List of case insensitive usernames, that will be promoted immediately",
-  "admins": ["talltechdude"]
+  "admins": []
 }
