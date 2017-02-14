@@ -21,7 +21,7 @@ factorio-data:
     io.rancher.container.start_once: "true"
 
 factorio-manager:
-  image: jjclark/factorio
+  image: talltechdude/factorio-manager
   environment:
     - ADMIN_PASSWORD=12345678
   ports:
@@ -30,4 +30,4 @@ factorio-manager:
     - factorio
   net: bridge
   volumes_from:
-    - factorio-data
+    - factorio
