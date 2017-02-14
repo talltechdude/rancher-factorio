@@ -9,12 +9,12 @@ RUN apt-get update && apt-get install -y curl tini && \
 	rm /tmp/factorio_headless_x64_$VERSION.tar.gz && \
 	apt-get remove --purge -y curl && \
 	chmod +x /opt/factorio/bin/x64/factorio && \
-	mkdir /opt/factorio/config
+	mkdir /opt/factorio/data
 
 WORKDIR /opt/factorio
 
-COPY files/map-gen-settings.json /opt/factorio/config
-COPY files/server-settings.json /opt/factorio/config
+COPY files/map-gen-settings.json /opt/factorio/data
+COPY files/server-settings.json /opt/factorio/data
 COPY files/run.sh /opt/factorio
 
 ENV FACTORIO_SAVE_NAME=factorio
