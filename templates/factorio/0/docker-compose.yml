@@ -16,6 +16,7 @@ factorio-data:
   volumes:
     - /opt/factorio/saves
     - /opt/factorio/mods
+    - /opt/factorio/data
   command: /bin/true
   labels:
     io.rancher.container.start_once: "true"
@@ -26,8 +27,6 @@ factorio-manager:
     - ADMIN_PASSWORD=12345678
   ports:
     - 8000:8000/tcp
-  links:
-    - factorio
   net: bridge
   volumes_from:
-    - factorio
+    - factorio-data

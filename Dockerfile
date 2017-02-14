@@ -22,6 +22,7 @@ ENV FACTORIO_PORT=
 
 VOLUME /opt/factorio/saves
 VOLUME /opt/factorio/mods
+VOLUME /opt/factorio/data
 
 EXPOSE 34197/udp
 
