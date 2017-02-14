@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y curl tini && \
 	tar xzf /tmp/factorio_headless_x64_$VERSION.tar.gz --directory /opt && \
 	rm /tmp/factorio_headless_x64_$VERSION.tar.gz && \
 	apt-get remove --purge -y curl && \
-	chmod +x /opt/factorio/bin/x64/factorio && \
-	mkdir /opt/factorio/data
+	apt-get autoremove -y && \
+	chmod +x /opt/factorio/bin/x64/factorio
 
 WORKDIR /opt/factorio
 
